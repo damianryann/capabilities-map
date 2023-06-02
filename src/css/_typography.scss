@@ -1,0 +1,132 @@
+$font-primary: Arial, Helvetica, sans-serif;
+$font-secondary: Arial, Helvetica, sans-serif;
+$body: 0.875rem; // 14px
+$body-sm: 0.75rem; // 12px
+
+body,
+.body {
+  font-size: $body;
+  line-height: 1.25rem;
+}
+
+.body-sm {
+  font-size: $body-sm;
+  line-height: 1.25rem;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+@media screen and (min-width: 0px) {
+  h1,
+  .h1 {
+    font-size: 1.625rem;
+    font-weight: 700;
+    line-height: 2.125rem;
+  }
+
+  h2,
+  .h2 {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
+
+  h3,
+  .h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  h4,
+  .h4 {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+
+  h5,
+  .h5 {
+    font-size: 1rem;
+  }
+
+  h6,
+  .h6 {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1,
+  .h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+  }
+
+  h2,
+  .h2 {
+    font-size: 1.5625rem;
+    line-height: 2.125rem;
+  }
+
+  h3,
+  .h3 {
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+  }
+
+  h4,
+  .h4 {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+
+  h5,
+  .h5 {
+    font-size: 1rem;
+  }
+
+  h6,
+  .h6 {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  h1,
+  .h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 3rem;
+  }
+
+  h2,
+  .h2 {
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+  }
+
+  h3,
+  .h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  h4,
+  .h4 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  h5,
+  .h5 {
+    font-size: 1rem;
+  }
+
+  h6,
+  .h6 {
+    font-size: 0.75rem;
+  }
+}

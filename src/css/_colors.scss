@@ -1,0 +1,220 @@
+// InVu New Pallet
+
+// Green
+$Green100: #dbfded;
+$Green200: #bbf9dd;
+$Green300: #9ff3ce;
+$Green400: #87ecc0;
+$Green500: #56e2a8;
+$Green600: #3cca90;
+$Green700: #27b17b;
+$Green800: #179869;
+$Green900: #0a8058;
+$Green1000: #036949;
+$Green1100: #01523b;
+$Green1200: #003c2d;
+
+// Yellow
+$Yellow100: #fff7e3;
+$Yellow200: #ffefc8;
+$Yellow300: #ffe7ae;
+$Yellow400: #ffde94;
+$Yellow500: #ffca57;
+$Yellow600: #feb83c;
+$Yellow700: #f8a62c;
+$Yellow800: #ef9625;
+$Yellow900: #e58723;
+$Yellow1000: #d97824;
+$Yellow1100: #cd6a26;
+$Yellow1200: #c05c27;
+
+// Red
+$Red100: #ffe9e8;
+$Red200: #ffd3d2;
+$Red300: #ffbcbb;
+$Red400: #fea5a5;
+$Red500: #fd747b;
+$Red600: #f35a69;
+$Red700: #e1455b;
+$Red800: #cc334f;
+$Red900: #b42545;
+$Red1000: #9b1a3b;
+$Red1100: #821131;
+$Red1200: #690a28;
+
+// InVu Old Pallet - TODO: To be retired / updated
+
+// hero sequential
+$Hero90: #001e55;
+$Hero80: #10288c;
+$Hero70: #1f3ab5;
+$Hero60: #2d52d2;
+$Hero50: #3b6de6;
+$Hero40: #468af3;
+$Hero30: #4fa8fb;
+$Hero20: #55c7ff;
+$Hero10: #5ae6ff;
+
+// purple sequential
+$Purple90: #460f32;
+$Purple80: #620e57;
+$Purple70: #7b1876;
+$Purple60: #912a91;
+$Purple50: #a440a8;
+$Purple40: #b458be;
+$Purple30: #c271d1;
+$Purple20: #ce8be4;
+$Purple10: #d7a5f5;
+
+$Multi90: #081e52;
+$Multi80: #213461;
+$Multi70: #344d6e;
+$Multi60: #46687e;
+$Multi50: #57838c;
+$Multi40: #689e9c;
+$Multi30: #78bbab;
+$Multi20: #89d8bb;
+$Multi10: #9af7cb;
+
+$Mono90: #081d52;
+$Mono80: #1b3365;
+$Mono70: #2a4979;
+$Mono60: #39618d;
+$Mono50: #4779a2;
+$Mono40: #5693b8;
+$Mono30: #65adce;
+$Mono20: #73c7e4;
+$Mono10: #81e1fc;
+
+$Categorical90: #001e55;
+$Categorical80: #231edc;
+$Categorical70: #0a7dff;
+$Categorical60: #5ae6ff;
+$Categorical50: #6f006e;
+$Categorical40: #a800a8;
+$Categorical30: #d7a5f5;
+$Categorical20: #d72850;
+$Categorical10: #ff9191;
+
+/*
+* jacobs pallet
+*/
+
+// blues
+$p1-blue: #231edc;
+$p2-blue: #0a7dff;
+$p3-blue: #5ae6ff;
+$p4-blue: #001e55;
+
+// purples
+$p1-purple: #6f0062;
+$p2-purple: #a800a8;
+$p3-purple: #d7a5f5;
+$p4-purple: #460f32;
+
+// reds
+$p1-red: #d72850;
+$p2-red: #ff464f;
+$p3-red: #ff9191;
+$p3-red: #690a28;
+
+// yellows
+$p1-yellow: #ffa014;
+$p2-yellow: #ffb41e;
+$p3-yellow: #ffdc78;
+$p4-yellow: #c05c27;
+
+// greens
+$p1-green: #007d55;
+$p2-green: #0ad287;
+$p3-green: #78fac8;
+$p4-green: #003c2d;
+
+// netruals
+$n1: #333;
+$n2: #a5a5a5;
+$n3: #c8c8c8;
+$n4: #e6e6e6;
+$n5: #f3f3f3;
+$n6: #999999;
+
+// ui support/danger
+$ui1: #eb0d19;
+
+// background
+$background: #f3f3f3;
+$border: #e5e5e5;
+$gaugeBg: #e5e5e5;
+
+// custom colors
+$primary: $p1-blue;
+$tertiary: $n1;
+$secondary: #485a79;
+$success: #198754;
+$danger: $ui1;
+$warning: #ffc107;
+$info: #0dcaf0;
+$light: #8bb6ff;
+$lightGrey: #e6e7eb;
+$extreme: #6f42c1;
+$tableGrey: #e0e0e0;
+
+// basic colors
+$transparent: #ffffff00;
+$white: #ffffff;
+$black: #000000;
+$charcoal: #010101;
+
+// Grayscale colors
+$gray-100: #fafafa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$gray-1000: #999999;
+
+/**
+** Color palette
+**/
+
+$theme-colors: (
+  'primary': $primary,
+  'tertiary': $tertiary,
+  'secondary': $transparent,
+  'utility': $transparent,
+  'success': $success,
+  'ghost': $transparent,
+  'filter': $transparent,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+  'extreme': $extreme,
+  'light': $light,
+  'white': $white,
+  'background': $background,
+  'light-grey': $lightGrey,
+  'table-grey': $tableGrey,
+  'n1': $n1,
+  'n2': $n2,
+  'n3': $n3,
+  'n4': $n4,
+  'n5': $n5,
+  'n6': $n6,
+  'black': $black,
+  'gray-100': $gray-100,
+  'gray-200': $gray-200,
+  'gray-300': $gray-300,
+  'gray-400': $gray-400,
+  'gray-500': $gray-500,
+  'gray-600': $gray-600,
+  'gray-700': $gray-700,
+  'gray-800': $gray-800,
+  'gray-900': $gray-900,
+  'gray-1000': $gray-1000,
+  'card': $border,
+  'gaugeBg': $gaugeBg
+) !default;
