@@ -1,12 +1,22 @@
-$font-primary: Arial, Helvetica, sans-serif;
+$font-primary: 'JacobsChronos', sans-serif;
 $font-secondary: Arial, Helvetica, sans-serif;
 $body: 0.875rem; // 14px
 $body-sm: 0.75rem; // 12px
 
 body,
 .body {
+  font-family: $font-secondary;
   font-size: $body;
   line-height: 1.25rem;
+  background-color: $background;
+}
+
+.font-primary {
+  font-family: $font-primary;
+}
+
+.font-secondary {
+  font-family: $font-secondary;
 }
 
 .body-sm {
@@ -16,7 +26,7 @@ body,
 
 @for $i from 1 through 6 {
   h#{$i} {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $font-primary;
   }
 }
 

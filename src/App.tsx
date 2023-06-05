@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from 'react';
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
 import { data } from './data';
 
@@ -37,15 +36,22 @@ function App() {
     <Fragment>
       <div className="container-fluid">
         <div className="row p-4">
-          <div className="col-12 col-sm-12">
-            <h1>Capabilities Map</h1>
+          <div className="col-12">
+            <h2>Capabilities Map</h2>
             <div className="d-flex justify-content-center">
               {sections.map(section => (
                 <a
                   key={section.id}
-                  className={`mx-4 fw-bold`}
+                  className={`font-primary mx-2 fw-bold px-2 py-1 rounded-sm ${
+                    visibleSection === section.id ? 'active' : ''
+                  }`}
                   style={{
-                    color: section.color
+                    color:
+                      visibleSection === section.id ? 'white' : section.color,
+                    backgroundColor:
+                      visibleSection === section.id
+                        ? section.color
+                        : 'transparent'
                   }}
                   onClick={() => toggleSection(section.id)}>
                   {section.title}
@@ -53,41 +59,45 @@ function App() {
               ))}
             </div>
             <hr />
-            <ResponsiveMasonry
-              columnsCountBreakPoints={{ 350: 4, 750: 8, 900: 16 }}>
-              <Masonry gutter="10px">
-                {sections.map(section =>
-                  section.items.map((item, itemId) => (
-                    <div
-                      key={itemId}
-                      className={`card ratio ratio-1x1 p-3 ${
-                        visibleSection !== null && visibleSection !== section.id
-                          ? 'opacity-50'
-                          : ''
-                      }`}
-                      onClick={() => openModal(item)}
-                      style={{ backgroundColor: section.color }}>
-                      <div className="d-flex justify-content-center align-items-center text-size text-white text-center">
-                        {item.name}
-                      </div>
+            <div className="d-flex flex-wrap gap-3">
+              {sections.map(section =>
+                section.items.map((item, itemId) => (
+                  <div
+                    key={itemId}
+                    className={`card ratio ratio-1x1 ${
+                      visibleSection !== null && visibleSection !== section.id
+                        ? 'opacity-25'
+                        : ''
+                    } rounded-sm`}
+                    onClick={() => openModal(item)}
+                    style={{
+                      backgroundColor: section.color,
+                      maxWidth: '70px'
+                    }}>
+                    <div className="d-flex justify-content-center align-items-center text-size text-white text-center p-1">
+                      {item.name}
                     </div>
-                  ))
-                )}
-              </Masonry>
-            </ResponsiveMasonry>
+                  </div>
+                ))
+              )}
+            </div>
           </div>
         </div>
+
         <div className={`modal ${showModal ? 'show' : ''}`} tabIndex={-1}>
-          <div className="modal-dialog">
-            <div className="modal-content">
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content rounded-sm">
               <div className="modal-header">
                 <h5 className="modal-title">
                   {selectedItem && selectedItem.name}
                 </h5>
                 <button
                   type="button"
+                  name="close-button"
                   className="btn-close"
-                  onClick={() => setShowModal(false)}></button>
+                  onClick={() => setShowModal(false)}>
+                  <span className="invisible">Close Modal</span>
+                </button>
               </div>
               <div className="modal-body">
                 <ul>
@@ -95,7 +105,9 @@ function App() {
                     selectedItem.subItems.map((items, i) => {
                       return (
                         <li key={i}>
-                          <a href={items.href}>{items.name}</a>
+                          <a href={items.href} target="_blank">
+                            {items.name}
+                          </a>
                         </li>
                       );
                     })}

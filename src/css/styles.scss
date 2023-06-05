@@ -56,13 +56,27 @@
 // 7. Optionally include utilities API last to generate classes based on the Sass map in _utilities.scss
 @import 'bootstrap/scss/utilities/api';
 
+@font-face {
+  font-family: 'JacobsChronos';
+  src: url('https://www.jacobs.com/themes/custom/jacobs_theme/asset/font/JacobsChronosRegular.03ea282.woff2')
+    format('woff2');
+}
+
+.rounded-sm {
+  border-radius: 4px !important;
+}
+
+.btn {
+  border-radius: 4px !important;
+}
+
 .inline-item {
   display: inline-block;
   flex-wrap: wrap;
 }
 
 .text-size {
-  font-size: 0.5rem;
+  font-size: 0.6rem;
 }
 
 .card {
@@ -82,6 +96,10 @@ a {
   &:focus {
     cursor: pointer;
     text-decoration: underline;
+  }
+
+  &.active {
+    text-decoration: none;
   }
 }
 
