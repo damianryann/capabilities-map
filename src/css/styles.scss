@@ -64,3 +64,39 @@
 .text-size {
   font-size: 0.5rem;
 }
+
+.card {
+  transition: scale 0.2s ease;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    scale: 1.2;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.show {
+  display: block !important;
+}
+
+.modal-bg {
+  background-color: #000;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: 99;
+  height: 100vh;
+  width: 100vw;
+}

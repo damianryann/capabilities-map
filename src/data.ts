@@ -3,21 +3,25 @@ export const data = {
     {
       id: 1,
       title: 'Requirements & Consents',
-      color: '#179869',
+      color: '#83B84D',
       items: [
         {
           sectionId: 1,
-          name: 'Requirements and Scope Management',
+          name: 'Requirements & Scope Management',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: 'Some Application name',
+              href: 'https://google.com'
+            },
+            {
+              name: 'Some Application name, maybe InVu?',
+              href: 'https://invu.jacobs.com/demo-dev'
             }
           ]
         },
         {
           sectionId: 1,
-          name: 'Commitments and Consents',
+          name: 'Commitments & Consents',
           subItems: [
             {
               name: ' Sub Item 1',
@@ -60,7 +64,7 @@ export const data = {
     {
       id: 2,
       title: 'Quality',
-      color: '#9b1a3b',
+      color: '#4DB88B',
       items: [
         {
           sectionId: 2,
@@ -85,6 +89,83 @@ export const data = {
         {
           sectionId: 2,
           name: 'Audit',
+          subItems: [
+            {
+              name: ' Sub Item 1',
+              href: '/link1'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: 3,
+      title: 'Programme Controls',
+      color: '#CB5A5A',
+      items: [
+        {
+          sectionId: 3,
+          name: 'Schedule Management',
+          subItems: [
+            {
+              name: ' Sub Item 1',
+              href: '/link1'
+            }
+          ]
+        },
+        {
+          sectionId: 3,
+          name: 'Risk Managament',
+          subItems: [
+            {
+              name: ' Sub Item 1',
+              href: '/link1'
+            }
+          ]
+        },
+        {
+          sectionId: 3,
+          name: 'Cost Estimation & Management',
+          subItems: [
+            {
+              name: ' Sub Item 1',
+              href: '/link1'
+            }
+          ]
+        },
+        {
+          sectionId: 3,
+          name: 'Cost Control',
+          subItems: [
+            {
+              name: ' Sub Item 1',
+              href: '/link1'
+            }
+          ]
+        },
+        {
+          sectionId: 3,
+          name: 'Change Management',
+          subItems: [
+            {
+              name: ' Sub Item 1',
+              href: '/link1'
+            }
+          ]
+        },
+        {
+          sectionId: 3,
+          name: 'Performance Management',
+          subItems: [
+            {
+              name: ' Sub Item 1',
+              href: '/link1'
+            }
+          ]
+        },
+        {
+          sectionId: 3,
+          name: 'Analysis & Reporting',
           subItems: [
             {
               name: ' Sub Item 1',
