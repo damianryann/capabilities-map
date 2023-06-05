@@ -32,6 +32,47 @@ function App() {
     setShowModal(true);
   };
 
+  function calculateRelativeLuminance(color: string) {
+    const parseColor = (c: any) => {
+      c = parseInt(c, 16) / 255;
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+    };
+
+    const [r, g, b] = [
+      color.slice(1, 3),
+      color.slice(3, 5),
+      color.slice(5, 7)
+    ].map(parseColor);
+
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  }
+
+  function getContrastRatio(
+    backgroundLuminance: number,
+    textLuminance: number
+  ) {
+    const lightest = Math.max(backgroundLuminance, textLuminance);
+    const darkest = Math.min(backgroundLuminance, textLuminance);
+    return (lightest + 0.05) / (darkest + 0.05);
+  }
+
+  function getTextColor(backgroundColor: string) {
+    const backgroundLuminance = calculateRelativeLuminance(backgroundColor);
+    const whiteLuminance = 1.0;
+    const blackLuminance = 0.0;
+
+    const contrastWithWhite = getContrastRatio(
+      backgroundLuminance,
+      whiteLuminance
+    );
+    const contrastWithBlack = getContrastRatio(
+      backgroundLuminance,
+      blackLuminance
+    );
+
+    return contrastWithWhite >= contrastWithBlack ? '#FFFFFF' : '#000000';
+  }
+
   return (
     <Fragment>
       <div className="container-fluid">
@@ -47,7 +88,9 @@ function App() {
                   }`}
                   style={{
                     color:
-                      visibleSection === section.id ? 'white' : section.color,
+                      visibleSection === section.id
+                        ? getTextColor(section.color)
+                        : section.color,
                     backgroundColor:
                       visibleSection === section.id
                         ? section.color
@@ -71,10 +114,11 @@ function App() {
                     } rounded-sm`}
                     onClick={() => openModal(item)}
                     style={{
+                      color: getTextColor(section.color),
                       backgroundColor: section.color,
                       maxWidth: '70px'
                     }}>
-                    <div className="d-flex justify-content-center align-items-center text-size text-white text-center p-1">
+                    <div className="d-flex justify-content-center align-items-center text-size text-center p-1">
                       {item.name}
                     </div>
                   </div>

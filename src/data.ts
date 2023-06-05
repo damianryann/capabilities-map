@@ -3,7 +3,7 @@ export const data = {
     {
       id: 1,
       title: 'Requirements & Consents',
-      color: '#83B84D',
+      color: '#01523B',
       items: [
         {
           sectionId: 1,
@@ -64,7 +64,7 @@ export const data = {
     {
       id: 2,
       title: 'Quality',
-      color: '#4DB88B',
+      color: '#0A8058',
       items: [
         {
           sectionId: 2,
@@ -101,7 +101,7 @@ export const data = {
     {
       id: 3,
       title: 'Programme Controls',
-      color: '#CB5A5A',
+      color: '#CC334F',
       items: [
         {
           sectionId: 3,
@@ -166,6 +166,93 @@ export const data = {
         {
           sectionId: 3,
           name: 'Analysis & Reporting',
+          subItems: [
+            {
+              name: ' Sub Item 1',
+              href: '/link1'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: 4,
+      title: 'People and Resources',
+      color: '#EF9625',
+      items: [
+        {
+          sectionId: 4,
+          name: 'Talent Management',
+          subItems: [
+            {
+              name: ' Sub Item 1',
+              href: '/link1'
+            }
+          ]
+        },
+        {
+          sectionId: 4,
+          name: 'Resourcing',
+          subItems: [
+            {
+              name: ' Sub Item 1',
+              href: '/link1'
+            }
+          ]
+        },
+        {
+          sectionId: 4,
+          name: 'Recruitment & On-Boarding​',
+          subItems: [
+            {
+              name: ' Sub Item 1',
+              href: '/link1'
+            }
+          ]
+        },
+        {
+          sectionId: 4,
+          name: 'Training',
+          subItems: [
+            {
+              name: ' Sub Item 1',
+              href: '/link1'
+            }
+          ]
+        },
+        {
+          sectionId: 4,
+          name: 'Wellbeing',
+          subItems: [
+            {
+              name: ' Sub Item 1',
+              href: '/link1'
+            }
+          ]
+        },
+        {
+          sectionId: 4,
+          name: 'Time Management',
+          subItems: [
+            {
+              name: ' Sub Item 1',
+              href: '/link1'
+            }
+          ]
+        },
+        {
+          sectionId: 4,
+          name: 'Payroll',
+          subItems: [
+            {
+              name: ' Sub Item 1',
+              href: '/link1'
+            }
+          ]
+        },
+        {
+          sectionId: 4,
+          name: 'Equality, Diversity, Inclusion',
           subItems: [
             {
               name: ' Sub Item 1',
