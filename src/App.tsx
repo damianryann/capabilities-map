@@ -79,11 +79,11 @@ function App() {
         <div className="row p-4">
           <div className="col-12">
             <h2>Capabilities Map</h2>
-            <div className="d-flex justify-content-center">
+            <div className="d-flex flex-wrap justify-content-center">
               {sections.map(section => (
                 <a
                   key={section.id}
-                  className={`font-primary mx-2 fw-bold px-2 py-1 rounded-sm ${
+                  className={`font-primary mx-2 fw-bold px-2 py-1 rounded-sm text-center ${
                     visibleSection === section.id ? 'active' : ''
                   }`}
                   style={{
