@@ -1,4 +1,4 @@
-export const data = {
+export const sourceData = {
   sections: [
     {
       id: 1,
@@ -8,54 +8,58 @@ export const data = {
         {
           sectionId: 1,
           name: 'Requirements & Scope Management',
+          description: 'Requirements & Consents is lorel ipsum',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: 'Some Application name',
-              href: 'https://google.com'
+              name: 'Some Application name'
             },
             {
-              name: 'Some Application name, maybe InVu?',
-              href: 'https://invu.jacobs.com/demo-dev'
+              name: 'Some Application name, maybe InVu?'
             }
           ]
         },
         {
           sectionId: 1,
           name: 'Commitments & Consents',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         },
         {
           sectionId: 1,
           name: 'Land Acquisition',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         },
         {
           sectionId: 1,
           name: 'Land Management',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         },
         {
           sectionId: 1,
           name: 'Utility Management',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         }
@@ -69,30 +73,33 @@ export const data = {
         {
           sectionId: 2,
           name: 'Quality Management',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         },
         {
           sectionId: 2,
           name: 'Quality Assurance',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         },
         {
           sectionId: 2,
           name: 'Audit',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         }
@@ -106,70 +113,77 @@ export const data = {
         {
           sectionId: 3,
           name: 'Schedule Management',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         },
         {
           sectionId: 3,
           name: 'Risk Managament',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         },
         {
           sectionId: 3,
           name: 'Cost Estimation & Management',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         },
         {
           sectionId: 3,
           name: 'Cost Control',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         },
         {
           sectionId: 3,
           name: 'Change Management',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         },
         {
           sectionId: 3,
           name: 'Performance Management',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         },
         {
           sectionId: 3,
           name: 'Analysis & Reporting',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         }
@@ -183,80 +197,87 @@ export const data = {
         {
           sectionId: 4,
           name: 'Talent Management',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         },
         {
           sectionId: 4,
           name: 'Resourcing',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         },
         {
           sectionId: 4,
-          name: 'Recruitment & On-Boarding​',
+          name: 'Recruitment & On-Boarding',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         },
         {
           sectionId: 4,
           name: 'Training',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         },
         {
           sectionId: 4,
           name: 'Wellbeing',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         },
         {
           sectionId: 4,
           name: 'Time Management',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         },
         {
           sectionId: 4,
           name: 'Payroll',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         },
         {
           sectionId: 4,
           name: 'Equality, Diversity, Inclusion',
+          description: '',
+          href: 'http://google.com/',
           subItems: [
             {
-              name: ' Sub Item 1',
-              href: '/link1'
+              name: ' Sub Item 1'
             }
           ]
         }

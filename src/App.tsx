@@ -1,23 +1,36 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 
-import { data } from './data';
-
+import { sourceData } from './data';
 interface SubItems {
   name: string;
-  href: string;
 }
 
 interface ModalData {
   sectionId: number;
   name: string;
+  href: string;
   subItems: SubItems[];
+}
+interface Sections {
+  id: number;
+  title: string;
+  color: string;
+  items: ModalData[];
+}
+
+interface Data {
+  sections: Sections[];
 }
 
 function App() {
-  const { sections } = data;
   const [visibleSection, setVisibleSection] = useState<number | null>(null);
   const [showModal, setShowModal] = useState<boolean>(false);
   const [selectedItem, setSelectedItem] = useState<ModalData | null>(null);
+  const [data, setData] = useState<Data | null>(null);
+
+  useEffect(() => {
+    setData(sourceData as any);
+  }, []);
 
   const toggleSection = (sectionId: number) => {
     if (visibleSection === sectionId) {
@@ -80,30 +93,31 @@ function App() {
           <div className="col-12">
             <h2>Capabilities Map</h2>
             <div className="d-flex flex-wrap justify-content-center">
-              {sections.map(section => (
-                <a
-                  key={section.id}
-                  className={`font-primary mx-2 fw-bold px-2 py-1 rounded-sm text-center ${
-                    visibleSection === section.id ? 'active' : ''
-                  }`}
-                  style={{
-                    color:
-                      visibleSection === section.id
-                        ? getTextColor(section.color)
-                        : section.color,
-                    backgroundColor:
-                      visibleSection === section.id
-                        ? section.color
-                        : 'transparent'
-                  }}
-                  onClick={() => toggleSection(section.id)}>
-                  {section.title}
-                </a>
-              ))}
+              {data &&
+                data.sections.map(section => (
+                  <a
+                    key={section.id}
+                    className={`font-primary mx-2 fw-bold px-2 py-1 rounded-sm text-center ${
+                      visibleSection === section.id ? 'active' : ''
+                    }`}
+                    style={{
+                      color:
+                        visibleSection === section.id
+                          ? getTextColor(section.color)
+                          : section.color,
+                      backgroundColor:
+                        visibleSection === section.id
+                          ? section.color
+                          : 'transparent'
+                    }}
+                    onClick={() => toggleSection(section.id)}>
+                    {section.title}
+                  </a>
+                ))}
             </div>
             <hr />
             <div className="d-flex flex-wrap gap-3">
-              {sections.map(section =>
+              {data?.sections.map(section =>
                 section.items.map((item, itemId) => (
                   <div
                     key={itemId}
@@ -147,23 +161,18 @@ function App() {
                 <ul>
                   {selectedItem &&
                     selectedItem.subItems.map((items, i) => {
-                      return (
-                        <li key={i}>
-                          <a href={items.href} target="_blank">
-                            {items.name}
-                          </a>
-                        </li>
-                      );
+                      return <li key={i}>{items.name}</li>;
                     })}
                 </ul>
               </div>
               <div className="modal-footer">
-                <button
+                <a
                   type="button"
-                  className="btn btn-primary"
-                  onClick={() => setShowModal(false)}>
-                  Close
-                </button>
+                  className="btn btn-primary text-decoration-none"
+                  href={selectedItem?.href}
+                  target="_blank">
+                  {`Go to ${selectedItem?.name} Page`}
+                </a>
               </div>
             </div>
           </div>
